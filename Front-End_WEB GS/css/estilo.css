@@ -159,7 +159,7 @@ body.dark{
     bottom: 0;
     font-size: 15px;
     padding-top:-20px;
-    box-shadow:0px 0px 4px 2px ;
+    box-shadow:0px 0px 6px 3px ;
 }
 
 .p_footer{
@@ -186,14 +186,26 @@ body.dark{
 
 #Git{
     height: 35px;
+    
 }
 
 .img-midia{
     width: 10px;
     display: inline;
     position: relative;
-    left: 42rem;
+    left: 40.2rem;
     bottom: 15px;
+    letter-spacing: 30px;
+    
+}
+
+hr{
+    position: relative;
+    background-color: rgb(238, 14, 14);
+    color: rgb(255, 255, 255);
+    width: 16rem;
+    right: 49px;
+    top: 13px;
 }
 
 
