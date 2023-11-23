@@ -8,6 +8,9 @@
     font-family:'Poppins', sans-serif;
 }
 
+body{
+    overflow-x: hidden;
+}
 
 .nav-icon{
     display: flex;
