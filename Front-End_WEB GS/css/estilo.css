@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&family=Playfair+Display:ital@1&family=Raleway:wght@200&family=Roboto:ital,wght@1,300&display=swap');
+*{
+    margin: 0;
+    padding: 0;
+    /*font-family: 'Inconsolata', monospace;
+    font-family: 'Playfair Display', serif;
+    font-family: 'Raleway', sans-serif;*/
+    font-family:'Poppins', sans-serif;
+}
+
+
+.nav-icon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 10vh;
+    margin: 0;
+    transition: all;
+    transition: background 0.2s linear;
+    margin-left: 27rem;
+    display: inline;
+    padding: -2px;
+}
+
+body.dark{
+    background-color: #232c35;
+}
+
+#chk{
+    opacity: 0;
+    position: relative;
+
+}
+
+
+.label{
+    background-color: #111;
+    border-radius: 60px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 5px;
+    position: relative;
+    height: 15px;
+    width: 48px;
+    transform: scale(1);
+    top: 5px;
+}
+
+.label .ball{
+    background-color: #fff;
+    border-radius: 55%;
+    position: absolute;
+    top: 1.1px;
+    left: 2px;
+    height: 22px;
+    width: 22px;
+    transform: translateX(0px);
+    transition: transform 0.2s linear;
+}
+
+#chk:checked + .label .ball{
+    transform: translateX(32px);
+}
+
+.fa-moon{
+    color: #f1c40f;
+}
+
+.fa-sun{
+    color: #f39c12;
+}
+
+#img-HapNotre{ /* Logo */
+    height: 2.8rem;
+    position: relative;
+    display: inline;
+    cursor: pointer;
+    margin:10px;
+    left: 1.7rem;
+    padding: 6px;
+}
+
+.container{
+    display: flex;
+    background:linear-gradient(to right, #ffc53cd8,#ff312e);
+    position: sticky;
+    /*box-shadow: 0 3px lightgrey;*/
+    box-shadow:  0px 0px 5px 1px;
+
+}
+
+.container-sec{ /* Logo e navegação */
+    position: sticky
+}
+
+
+#contato #demonstracao #problema{ /* Id li navegação */
+    position: absolute;
+    display: flex;
+    margin: 30px;
+
+}
+
+.btn-nav{ /* Elementos da vavegação */
+    position: relative;
+    display: flex;
+    gap: 1px;
+    list-style: none;
+    margin-bottom: 0px;
+    color: #57575c;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    left: 10rem;
+    font-size: 17px;
+}
+
+.btn-nav li a{
+    padding:34px;
+    text-decoration: none;
+    color: rgb(68, 68, 68);
+    display: inline-block;
+    position: relative;
+    letter-spacing: 0.5px;
+}
+
+
+.btn-nav li a:after{
+    content: "";
+    position: absolute;
+    height: 3px;
+    width: 0;
+    background-color:  #2c6cbc;
+    color: snow;
+    left: 0;
+    bottom:22px;
+    transition: 0.5s;
+    
+}
+
+.btn-nav li a:hover{
+    color:#ffffff;
+    
+}
+
+.btn-nav li a:hover:after{
+    width: 100%;
+}
+
+
+
+
