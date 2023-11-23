@@ -149,6 +149,53 @@ body.dark{
     width: 100%;
 }
 
+.rodape{
+    border: 100px solid #484d52;
+    border-radius: 20px 1px 1px 1px;
+    background:#484d52;
+    position: absolute;
+    width: 87.5%;
+    height: 30px;
+    bottom: 0;
+    font-size: 15px;
+    padding-top:-20px;
+    box-shadow:0px 0px 4px 2px ;
+}
+
+.p_footer{
+    position: absolute;
+    padding: 20px;
+    color: #fff;
+    margin-top: 20px;
+    padding:0;
+    bottom: -4.8rem;
+    left: 33rem;
+    letter-spacing: 1.5px;
+}
+
+#Inst{
+    height: 34px;
+}
+
+#Linkd{
+    display: inline;
+    position: relative;
+    height: 37px;
+    bottom: -1px;
+}
+
+#Git{
+    height: 35px;
+}
+
+.img-midia{
+    width: 10px;
+    display: inline;
+    position: relative;
+    left: 42rem;
+    bottom: 15px;
+}
+
 
 
 
