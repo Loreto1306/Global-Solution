@@ -6,16 +6,15 @@
     font-family: 'Playfair Display', serif;
     font-family: 'Raleway', sans-serif;*/
     font-family:'Poppins', sans-serif;
+    
 }
 
 body{
     overflow-x: hidden;
-    background-image:url("/img/pexels-los-muertos-crew-8460049.jpg");
-    background-repeat: no-repeat;
-    
-    background-size: 100%;
-    opacity: 100%;
-
+    background: linear-gradient(to bottom, snow, rgb(240, 221, 185));
+    background-repeat:no-repeat;
+    background-size:cover;
+    height: 100vh;
 }
 
 .container-sec{
@@ -91,7 +90,7 @@ body.dark{
     cursor: pointer;
     margin-top: 10px;
     left: 2%;
-    padding: 10px;
+    padding: 6px;
 }
 
 .container{
@@ -101,15 +100,14 @@ body.dark{
     box-shadow:  0px 0px 5px 1px;
     width: 100%;
     justify-content:center;
-    height:9.5vh ;
+    height:10vh ;
     text-align: center;
-    opacity: 100%;
+    opacity: 1;
     
 }
 
 header{
-    opacity: 100%;
-    background-size: cover;
+
 }
 
 
@@ -123,7 +121,7 @@ header{
     color: #57575c;
     align-items: center;
     font-size: 17px;
-
+    bottom: 2px;
 }
 
 .btn-nav li a{
