@@ -10,19 +10,27 @@
 
 body{
     overflow-x: hidden;
+    background-image:url("/img/pexels-los-muertos-crew-8460049.jpg");
+    background-repeat: no-repeat;
+    
+    background-size: 100%;
+    opacity: 100%;
+
+}
+
+.container-sec{
+    justify-content: center;
+    text-align: right;
+    left: 2%;
 }
 
 .nav-icon{
-    display: flex;
-    align-items: center;
-    justify-content: center;
+    display:inline-block;
     height: 10vh;
-    margin: 0;
     transition: all;
+    bottom: 6rem;
     transition: background 0.2s linear;
-    margin-left: 27rem;
-    display: inline;
-    padding: -2px;
+    position: relative;
 }
 
 body.dark{
@@ -48,23 +56,24 @@ body.dark{
     height: 15px;
     width: 48px;
     transform: scale(1);
-    top: 5px;
+    top: 20px;
+    right: 5rem;
 }
 
 .label .ball{
     background-color: #fff;
     border-radius: 55%;
     position: absolute;
-    top: 1.1px;
+    top: 1.4px;
     left: 2px;
-    height: 22px;
-    width: 22px;
+    height: 20px;
+    width: 20px;
     transform: translateX(0px);
     transition: transform 0.2s linear;
 }
 
 #chk:checked + .label .ball{
-    transform: translateX(32px);
+    transform: translateX(33px);
 }
 
 .fa-moon{
@@ -77,47 +86,44 @@ body.dark{
 
 #img-HapNotre{ /* Logo */
     height: 2.8rem;
-    position: relative;
-    display: inline;
+    position:absolute;
+    display: flex;
     cursor: pointer;
-    margin:10px;
-    left: 1.7rem;
-    padding: 6px;
+    margin-top: 10px;
+    left: 2%;
+    padding: 10px;
 }
 
 .container{
-    display: flex;
-    background:linear-gradient(to right, #ffc53cd8,#ff312e);
-    position: sticky;
+    display:flex;
+    background-image:linear-gradient(to right, #ffc53cd8,#ff312e);
     /*box-shadow: 0 3px lightgrey;*/
     box-shadow:  0px 0px 5px 1px;
-
+    width: 100%;
+    justify-content:center;
+    height:9.5vh ;
+    text-align: center;
+    opacity: 100%;
+    
 }
 
-.container-sec{ /* Logo e navegação */
-    position: sticky
+header{
+    opacity: 100%;
+    background-size: cover;
 }
 
 
-#contato #demonstracao #problema{ /* Id li navegação */
-    position: absolute;
-    display: flex;
-    margin: 30px;
 
-}
 
-.btn-nav{ /* Elementos da vavegação */
-    position: relative;
+.btn-nav{ /* Elementos da vavega??o */
     display: flex;
     gap: 1px;
+    position: relative;
     list-style: none;
-    margin-bottom: 0px;
     color: #57575c;
-    text-align: center;
-    justify-content: center;
     align-items: center;
-    left: 10rem;
     font-size: 17px;
+
 }
 
 .btn-nav li a{
@@ -152,14 +158,21 @@ body.dark{
     width: 100%;
 }
 
+#parag_ini{
+    font-size: 30px;
+    text-align: center;
+    color: whitesmoke;
+}
+
+
 .rodape{
-    border: 100px solid #484d52;
+    border: 0ch solid #484d52;
     border-radius: 20px 1px 1px 1px;
     background:#484d52;
     position: absolute;
-    width: 87.5%;
-    height: 30px;
-    bottom: 0;
+    width: 100%;
+    height: 13rem;                          /*Atribuindo altura do rodapé*/
+    bottom: 0;                              /*Faz o rodapé ficar em baixo*/
     font-size: 15px;
     padding-top:-20px;
     box-shadow:0px 0px 6px 3px ;
@@ -167,50 +180,51 @@ body.dark{
 
 .p_footer{
     position: absolute;
-    padding: 20px;
     color: #fff;
     margin-top: 20px;
-    padding:0;
-    bottom: -4.8rem;
-    left: 32rem;
+    bottom: 20px;
     letter-spacing: 1.5px;
+    width: 100%;
+    text-align: center;
+    position:absolute;
 }
 
 #Inst{
-    height: 34px;
+    height: 32px;
 }
 
 #Linkd{
     display: inline;
     position: relative;
-    height: 37px;
-    bottom: -1px;
+    height: 35px;
 }
 
 #Git{
     height: 35px;
-    
 }
 
 .img-midia{
-    width: 10px;
-    display: inline;
+    display:inline-flex;
     position: relative;
-    left: 39.2rem;
-    bottom: 15px;
-    letter-spacing: 30px;
-    
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
 }
 
 hr{
-    position: relative;
-    background-color: rgb(238, 14, 14);
-    color: rgb(255, 255, 255);
-    width: 16rem;
-    right: 49px;
-    top: 13px;
+
 }
 
 
 
-
+/*
+    width: 10px;
+    display: inline;
+    position: relative;
+    bottom: 15px;
+    letter-spacing: 30px;
+    text-align: center;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
