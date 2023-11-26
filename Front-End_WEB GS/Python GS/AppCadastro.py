@@ -11,37 +11,55 @@ app.config(bg='#F5DEB3')
 app.geometry("1280x665")
 
 #-------------------Função do Botão
-def pd():
+class CadastroPacienteApp:
+    def __init__(self,nome_do_paciente, cpf, rg, data_de_nascimento,data_de_entrada, data_de_saida, sexo, n_plano, titular, etnia, tp_sanguineo, obs):
+        self.app = app
+        self.nome_do_paciente = nome_do_paciente
+        self.cpf = cpf
+        self.rg = rg
+        self.data_de_nascimento = data_de_nascimento
+        self.data_de_entrada = data_de_entrada
+        self.data_de_saida = data_de_saida
+        self.sexo = sexo
+        self.estado_civil = estado_civil
+        self.n_plano = n_plano
+        self.titular = titular
+        self.etnia = etnia
+        self.tp_sanguineo = tp_sanguineo
+        self.obs = obs
+
+
+def pd():   
     if e1.get() == "" or e2.get() =="" or e7.get()=="": #É obrigatório preenchimento dos 3 campos para cadastrar, independentemente se o campo for preenchido com 000, xxx ou null.
-        messagebox.showerror("Erro", "Preencha todos os campos")
+           messagebox.showerror("Erro", "Preencha todos os campos")
     else:
-        con = mysql.connector.connect(host="localhost", username = "root", password = "root", database = "cadastro_hapvida")#Caso a primeira condição nao seja respeita cairá no else, inserindo os dados em tb no mysql.
+        variaveis = (nome_do_paciente.get() ,
+        cpf.get(),
+        rg.get(), 
+        data_de_nascimento.get(), 
+        data_de_entrada.get(), 
+        data_de_saida.get(), 
+        sexo.get(),
+        estado_civil.get(), 
+        n_plano.get(),
+        titular.get(),
+        etnia.get(),
+        tp_sanguineo.get(),
+        obs.get())
+        con = mysql.connector.connect(host="localhost", user = "root", password = "root", database = "cadastro_havida")#Caso a primeira condição nao seja respeita cairá no else, inserindo os dados em tb no mysql.
         my_cursor = con.cursor()
-        my_cursor.execute("insert into paciente value(s%, s%, s%, s%, s%, s%, s%, s%, s%, s%, s%, s%, s%)", (
-            nome_do_paciente.get(),
-            cpf.get(),
-            rg.get(), 
-            data_de_nascimento.get(), 
-            data_de_entrada.get(), 
-            data_de_saida.get(), 
-            sexo.get(),
-            estado_civil.get(), 
-            n_plano.get(),
-            titular.get(),
-            etnia.get(),
-            obs.get()
-        ))
+        my_cursor.execute("INSERT INTO paciente VALUES (%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s,%s )", (variaveis))
         con.commit()
         con.close()
         messagebox.showinfo("Sucesso", "Paciente Cadastrado com Sucesso")
 
-def fetch_data():
-    con = mysql.connector.connect(host="localhost", username = "root", password = "root", database = "mydata")#Caso a primeira condição nao seja respeita cairá no else, inserindo os dados em tb no mysql.
-    my_cursor = con.cursor()
-    my_cursor.execute('select * from Hapvida')
-    rows = my_cursor.fetchall()
-    #if len(rows)!=0:
-        #table.
+    def fetch_data():
+        con = mysql.connector.connect(host="localhost", user = "root", password = "root", database = "cadastro_havida")#Caso a primeira condição nao seja respeita cairá no else, inserindo os dados em tb no mysql.
+        my_cursor = con.cursor()
+        my_cursor.execute('select * from paciente')
+        rows = my_cursor.fetchall()
+        #if len(rows)!=0:
+            #table.
 
 #HEADER
 Label(app, text="Sistema de Cadastro de Pacientes", font='impack 29 bold', bg='#FAFAD2', fg='black' ).pack(fill=X)   #Setando uma caixa para Título, com fonte, bg, fg com .pack para "executar" a label 
@@ -86,7 +104,7 @@ n_plano = StringVar()
 titular = StringVar()
 etnia = StringVar()
 tp_sanguineo = StringVar()
-obs = StringVar
+obs = StringVar()
 
 #Campos para as Labels.
 e1 = Entry(lip1, bd=4, textvariable=nome_do_paciente)
