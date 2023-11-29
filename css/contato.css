@@ -13,8 +13,7 @@
 
 
 body{
-    overflow-x: hidden;
-    overflow-y: hidden;
+
     background-image: url('../img/photo-1516574187841-cb9cc2ca948b.avif');
     background-position: center center;
     background-size: cover;
@@ -227,9 +226,11 @@ body.dark{
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    width: 400px;
-    height:450px;
-    margin-bottom: 5%;
+    width: 20%;
+    max-width: 400px;
+    height:400px;
+    margin-bottom: 8%;
+    min-height: 400;
     padding: 60px;
     border-radius: 10px;
     text-align: center;
@@ -242,6 +243,7 @@ body.dark{
     color: #ffffff;
     font-size: 24px;
     text-shadow: 0 0 10px rgba(0,0,0,.5);
+    display: block;
 
 }
 
@@ -250,7 +252,7 @@ body.dark{
     align-items: center;
     flex-direction: column;
     width: 100%;
-    margin-top: 32px;
+    margin-top: 30px;
 }
 
 .box_login input{
