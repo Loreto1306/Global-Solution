@@ -15,3 +15,9 @@ form.addEventListener("submit", (e)=>{
     alert("Obrigado pelo Contato")
     
 })
+
+function limpar(){
+    document.getElementById("nome").value='';
+    document.getElementById("email").value='';
+}
+
